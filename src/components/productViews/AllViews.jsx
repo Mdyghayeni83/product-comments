@@ -12,7 +12,7 @@ export default function AllViews({
             <div className="flex items-center gap-1 pt-1">
                 {
                     [1, 2, 3, 4, 5].map((number)=>(
-                        <Star big active={rate >= number} />
+                        <Star big active={rate >= number} key={number} />
                     ))
                 }
             </div>

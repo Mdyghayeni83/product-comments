@@ -8,11 +8,11 @@ export default function PostedPicturesSlider({
     return (
         <div className="flex max-w-full gap-3 py-6 overflow-auto pr-4 no-scrollbar">
             {
-                _all_media.map((media)=>(
+                _all_media.map((media, index)=>(
                     media.type === 'image' ? (
-                        filters.includes('image') && <Picture src={media.url} />
+                        filters.includes('image') && <Picture src={media.url} key={index}/>
                     ) : (
-                        filters.includes('video') && <Video src={media.url} />
+                        filters.includes('video') && <Video src={media.url} key={index}/>
                     )
                 ))
             }

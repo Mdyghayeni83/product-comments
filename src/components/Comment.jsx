@@ -29,8 +29,8 @@ export default function Comment({
             </div>
             <div className="flex items-center gap-1 px-8 pt-2 pb-4">
                 {
-                    Array(data.stars_number).fill(0).map(() => (
-                        <Star active />
+                    Array(data.stars_number).fill(0).map((_, index) => (
+                        <Star active key={index}/>
                     ))
                 }
             </div>
@@ -51,8 +51,8 @@ export default function Comment({
             </p>
             <div className="flex items-center gap-4 pt-5">
                 {
-                    data.images.map((image) => (
-                        <Picture className="w-36 h-40" src={image} />
+                    data.images.map((image, index) => (
+                        <Picture className="w-36 h-40" src={image} key={index} />
                     ))
                 }
             </div>

@@ -11,11 +11,11 @@ export default function CommentsBox() {
             <FilterCommentsBox filters={filters} setFilter={setFilter} />
             <Line />
             {
-                _product_comments.map((comment) => (
-                    <>
+                _product_comments.map((comment, index) => (
+                    <template key={index}>
                         <Comment data={comment} />
                         <Line />
-                    </>
+                    </template>
                 ))
             }
         </div>
